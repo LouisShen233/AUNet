@@ -5,14 +5,7 @@ import pdb
 import torch
 import numpy as np
 from tqdm import tqdm
-import torch.nn as nn
-import utils.checkpoint as ckp
-import torch.backends.cudnn as cudnn
 
-from utils.utils import DirManager
-from utils import optimizer_helper, logging, meters
-from updatenet import upd_model_builder, loader_builder
-# from updatenet.utils_upd import overlap_ratio
 from torch.utils.data import dataloader
 from toolkit.datasets import DatasetFactory
 from toolkit.utils.region import vot_overlap, vot_float2str

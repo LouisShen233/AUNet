@@ -1,0 +1,23 @@
+# big files
+models/
+updatenet/checkpoint*
+results/
+updatenet/update_set_templates*
+*.model
+
+# cache
+*pycache*
+
+# vscode configuration
+*vscode*
+
+# experiment configuration
+configs/exp
+
+# debug files
+bin/debug_test.py
+
+# log files image files
+typescript
+*.txt
+*.jpg
