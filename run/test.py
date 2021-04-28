@@ -1,3 +1,7 @@
+import sys
+base_dir='/home/lyuyu/AUNet'
+sys.path.append(base_dir)
+
 import cv2
 import os
 import time
@@ -395,6 +399,4 @@ def template_vis(template, dim = 0, outfile = 'template_vis'):
     plt.savefig(outfile +'.jpg')
 
 if __name__ == '__main__':
-    # evaluation('OTB100', 'checkpoint12', 'results/SiamRPNBIG-AAUNetv2_4/run_21/upd_mod/step_1/results/OTB100/cosine')
-    evaluation('UAV123', 'tscheckpoint2', 'results/SiamRPNBIG-AAUNetv2_7_1/run_43/upd_mod/step_1/results/UAV123/cosine')
-    # evaluation('VOT2016', 'UpdateNet', './results/VOT2016/')
+    evaluation('VOT2016', 'UpdateNet', './results/VOT2016/')

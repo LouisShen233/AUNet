@@ -1,6 +1,6 @@
 import os
 import torch
-from basenet import SiamRPN, SiamRPNBIG, SiamRPNOTB, SiamRPNVOT
+from .basenet import SiamRPN, SiamRPNBIG, SiamRPNOTB, SiamRPNVOT
 
 tracker_dir = 'trackers/pretrained/'
 

@@ -7,7 +7,7 @@ import torch.nn.functional as F
 from updatenet.utils_upd import get_subwindow_tracking,generate_anchor,get_axis_aligned_bbox,Round
 from trackers.basenet import SiamRPNBIG
 from updatenet.config_upd import Config as TrackerConfig
-from updatenet import upd_model_builder, loader_builder
+from updatenet import upd_model_builder
 from updatenet.net_upd_old import UpdateResNet512,UpdateResNet256
 import torch.backends.cudnn as cudnn
 
