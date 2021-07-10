@@ -5,7 +5,7 @@ Code will be released soon.
 
 ## Installation
 
-### Requirments
+### Requirements
 * Conda with Python 3.7.
 * Nvidia GPU.
 

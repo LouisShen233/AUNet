@@ -12,7 +12,7 @@ class AUNet(nn.Module):
         self.batch = cfg["TRAIN"]["BATCH_SIZE"]
 
         mid_channel = int(self.template_channel // 8 * 3)
-        # 原updatenet中应为96
+        # 96 in the original UpdateNet
         kernel = cfg["UPDATE"].get("KERNEL_SZ", 1)
 
         self.shortcut = cfg["UPDATE"].get("SHORTCUT", True)
@@ -89,7 +89,6 @@ class AUNet(nn.Module):
         # previous frame to predict class
         assert type(x) is list
         x, x0, xa = x[0], x[1], x[2]
-        # 先加对x的cross attention
         xcls = torch.cat((x0, xa, x),1)
         xcls = self.ac(xcls)
         xcls = self.ac_bn(xcls)

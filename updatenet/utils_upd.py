@@ -168,7 +168,7 @@ def generate_anchor(total_stride, scales, ratios, score_size):
             anchor[count, 2] = wws
             anchor[count, 3] = hhs
             count += 1
-    #score_size必须是int类型，否则tile会报错
+    #score_size(int)
     anchor = np.tile(anchor, score_size * score_size).reshape((-1, 4))
     #ori = - (score_size / 2) * total_stride # python2
     ori = - (score_size // 2) * total_stride # python3
@@ -180,8 +180,6 @@ def generate_anchor(total_stride, scales, ratios, score_size):
     anchor[:, 0], anchor[:, 1] = xx.astype(np.float32), yy.astype(np.float32)
     return anchor
 
-
-#在官方DaSiamRPN项目中的utils.py中不存在overlap_ratio，此处为UpdateNet新添加函数
 def overlap_ratio(rect1, rect2):
     '''
     Compute overlap ratio between two rects
