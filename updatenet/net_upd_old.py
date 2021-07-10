@@ -1,8 +1,6 @@
 import torch 
 import torch.nn as nn
 
-
-#使用残差块,输出256通道
 class UpdateResNet256(nn.Module):
     def __init__(self, config=None):
         super(UpdateResNet256, self).__init__()
@@ -25,7 +23,6 @@ if __name__ == '__main__':
     net.eval()
     
 
-#使用残差块,输出512通道
 class UpdateResNet512(nn.Module):
     def __init__(self, config=None):
         super(UpdateResNet512, self).__init__()
@@ -41,7 +38,6 @@ class UpdateResNet512(nn.Module):
         response += x0
         return response
 
-#没有残差块 输出256通道
 class UpdateNet(nn.Module):
     def __init__(self, config=None):
         super(UpdateNet, self).__init__()
